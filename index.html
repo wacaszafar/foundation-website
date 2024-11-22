@@ -6,27 +6,33 @@
     <title>News Magazine - Foundation Template</title>
     
     <!-- Foundation CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" integrity="sha256-3JE4v+s/06RdHw54g0I9Wl6dfBzB0LjT0GQqbX8zkjZc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+    <!-- Motion UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@2.0.4/dist/motion-ui.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <!-- Navigation -->
-    <div class="top-bar">
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+        <div class="title-bar-title">News Magazine</div>
+    </div>
+
+    <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
-            <ul class="menu">
+            <ul class="dropdown menu" data-dropdown-menu>
                 <li class="menu-text">News Magazine</li>
-            </ul>
-        </div>
-        <div class="top-bar-right">
-            <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Politics</a></li>
                 <li><a href="#">Tech</a></li>
                 <li><a href="#">Science</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
                 <li><button type="button" class="button">Subscribe</button></li>
             </ul>
         </div>
@@ -35,7 +41,7 @@
     <!-- Breaking News Banner -->
     <div class="breaking-news-banner">
         <div class="grid-container">
-            <div class="grid-x">
+            <div class="grid-x grid-padding-x align-middle">
                 <div class="cell">
                     <span class="label alert">Breaking</span>
                     <span class="breaking-news-text">Latest Updates: Major technology breakthrough announced...</span>
@@ -47,11 +53,11 @@
     <!-- Main Content -->
     <div class="grid-container main-content">
         <!-- Featured Story -->
-        <div class="grid-x grid-margin-x">
+        <div class="grid-x grid-padding-x">
             <div class="cell large-8">
                 <div class="featured-story">
                     <div class="featured-image">
-                        <img src="https://via.placeholder.com/800x400" alt="Featured Story">
+                        <img src="https://placehold.co/800x400" alt="Featured Story">
                     </div>
                     <h1>Featured Story Headline</h1>
                     <p class="lead">A compelling introduction to the main story of the day, featuring important developments and key insights.</p>
@@ -64,12 +70,12 @@
                 <div class="side-stories">
                     <h4>Trending</h4>
                     <div class="story-card">
-                        <img src="https://via.placeholder.com/300x200" alt="Story 1">
+                        <img src="https://placehold.co/300x200" alt="Story 1">
                         <h5>Technology Impact</h5>
                         <p>How new innovations are changing our daily lives.</p>
                     </div>
                     <div class="story-card">
-                        <img src="https://via.placeholder.com/300x200" alt="Story 2">
+                        <img src="https://placehold.co/300x200" alt="Story 2">
                         <h5>Science Discovery</h5>
                         <p>Latest breakthrough in quantum computing.</p>
                     </div>
@@ -78,13 +84,13 @@
         </div>
 
         <!-- News Categories -->
-        <div class="grid-x grid-margin-x news-categories">
+        <div class="grid-x grid-padding-x news-categories">
             <!-- Technology News -->
             <div class="cell medium-4">
                 <div class="category-section">
                     <h4>Technology</h4>
                     <div class="news-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Tech News">
+                        <img src="https://placehold.co/400x300" alt="Tech News">
                         <div class="news-card-content">
                             <h5>AI Developments</h5>
                             <p>Latest developments in artificial intelligence and machine learning.</p>
@@ -98,7 +104,7 @@
                 <div class="category-section">
                     <h4>Science</h4>
                     <div class="news-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Science News">
+                        <img src="https://placehold.co/400x300" alt="Science News">
                         <div class="news-card-content">
                             <h5>Space Exploration</h5>
                             <p>New discoveries from the latest space missions.</p>
@@ -112,7 +118,7 @@
                 <div class="category-section">
                     <h4>Politics</h4>
                     <div class="news-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Politics News">
+                        <img src="https://placehold.co/400x300" alt="Politics News">
                         <div class="news-card-content">
                             <h5>Global Summit</h5>
                             <p>World leaders gather to discuss climate change.</p>
@@ -123,7 +129,7 @@
         </div>
 
         <!-- Newsletter Signup -->
-        <div class="grid-x grid-margin-x newsletter-section">
+        <div class="grid-x grid-padding-x newsletter-section">
             <div class="cell">
                 <div class="newsletter-container">
                     <h4>Stay Updated</h4>
@@ -144,7 +150,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="grid-container">
-            <div class="grid-x grid-margin-x">
+            <div class="grid-x grid-padding-x">
                 <div class="cell medium-4">
                     <h5>About Us</h5>
                     <p>Your trusted source for the latest news and in-depth reporting.</p>
@@ -176,9 +182,9 @@
         </div>
     </footer>
 
-    <!-- Foundation JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" integrity="sha256-8TpJVV6+8UxQ5E0nsKnlJx3HwvKxHIbHUoTvIKkZuEM=" crossorigin="anonymous"></script>
+    <!-- Foundation JavaScript Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
     <script>
         $(document).ready(function() {
             $(document).foundation();
