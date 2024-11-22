@@ -3,84 +3,175 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation Website</title>
+    <title>News Magazine - Foundation Template</title>
     
     <!-- Foundation CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" integrity="sha256-3JE4v+s/06RdHw54g0I9Wl6dfBzB0LjT0GQqbX8zkjZc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+
+    <!-- Navigation -->
     <div class="top-bar">
         <div class="top-bar-left">
             <ul class="menu">
-                <li class="menu-text">Site Logo</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="menu-text">News Magazine</li>
             </ul>
         </div>
         <div class="top-bar-right">
             <ul class="menu">
-                <li><input type="search" placeholder="Search"></li>
-                <li><button type="button" class="button">Search</button></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Science</a></li>
+                <li><button type="button" class="button">Subscribe</button></li>
             </ul>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero-section">
+    <!-- Breaking News Banner -->
+    <div class="breaking-news-banner">
         <div class="grid-container">
-            <div class="grid-x grid-padding-x align-middle" style="min-height: 500px;">
-                <div class="cell medium-6">
-                    <h1>Welcome to Our Site</h1>
-                    <p class="lead">This is a modern website built with Foundation Framework</p>
-                    <button class="button large">Learn More</button>
+            <div class="grid-x">
+                <div class="cell">
+                    <span class="label alert">Breaking</span>
+                    <span class="breaking-news-text">Latest Updates: Major technology breakthrough announced...</span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <!-- Feature Cards -->
-            <div class="cell medium-4">
-                <div class="card">
-                    <div class="card-section">
-                        <h4>Feature 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="grid-container main-content">
+        <!-- Featured Story -->
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-8">
+                <div class="featured-story">
+                    <div class="featured-image">
+                        <img src="https://via.placeholder.com/800x400" alt="Featured Story">
+                    </div>
+                    <h1>Featured Story Headline</h1>
+                    <p class="lead">A compelling introduction to the main story of the day, featuring important developments and key insights.</p>
+                    <p class="byline">By John Doe • <span class="date">October 1, 2023</span></p>
+                </div>
+            </div>
+            
+            <!-- Side Stories -->
+            <div class="cell large-4">
+                <div class="side-stories">
+                    <h4>Trending</h4>
+                    <div class="story-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Story 1">
+                        <h5>Technology Impact</h5>
+                        <p>How new innovations are changing our daily lives.</p>
+                    </div>
+                    <div class="story-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Story 2">
+                        <h5>Science Discovery</h5>
+                        <p>Latest breakthrough in quantum computing.</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- News Categories -->
+        <div class="grid-x grid-margin-x news-categories">
+            <!-- Technology News -->
             <div class="cell medium-4">
-                <div class="card">
-                    <div class="card-section">
-                        <h4>Feature 2</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="category-section">
+                    <h4>Technology</h4>
+                    <div class="news-card">
+                        <img src="https://via.placeholder.com/400x300" alt="Tech News">
+                        <div class="news-card-content">
+                            <h5>AI Developments</h5>
+                            <p>Latest developments in artificial intelligence and machine learning.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Science News -->
             <div class="cell medium-4">
-                <div class="card">
-                    <div class="card-section">
-                        <h4>Feature 3</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="category-section">
+                    <h4>Science</h4>
+                    <div class="news-card">
+                        <img src="https://via.placeholder.com/400x300" alt="Science News">
+                        <div class="news-card-content">
+                            <h5>Space Exploration</h5>
+                            <p>New discoveries from the latest space missions.</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Politics News -->
+            <div class="cell medium-4">
+                <div class="category-section">
+                    <h4>Politics</h4>
+                    <div class="news-card">
+                        <img src="https://via.placeholder.com/400x300" alt="Politics News">
+                        <div class="news-card-content">
+                            <h5>Global Summit</h5>
+                            <p>World leaders gather to discuss climate change.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="grid-x grid-margin-x newsletter-section">
+            <div class="cell">
+                <div class="newsletter-container">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for daily updates</p>
+                    <form>
+                        <div class="input-group">
+                            <input class="input-group-field" type="email" placeholder="Your email address">
+                            <div class="input-group-button">
+                                <input type="submit" class="button" value="Subscribe">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell">
-                <hr>
-                <p>&copy; 2023 Your Website. All rights reserved.</p>
+    <footer class="footer">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-4">
+                    <h5>About Us</h5>
+                    <p>Your trusted source for the latest news and in-depth reporting.</p>
+                </div>
+                <div class="cell medium-4">
+                    <h5>Quick Links</h5>
+                    <ul class="no-bullet">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Politics</a></li>
+                        <li><a href="#">Tech</a></li>
+                        <li><a href="#">Science</a></li>
+                    </ul>
+                </div>
+                <div class="cell medium-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="cell">
+                    <p class="copyright">&copy; 2023 News Magazine. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
