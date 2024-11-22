@@ -1,194 +1,270 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Magazine - Foundation Template</title>
-    
-    <!-- Foundation CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+    <title>NewsPress - News Magazine Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Motion UI -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@2.0.4/dist/motion-ui.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-        <div class="title-bar-title">News Magazine</div>
+    <!-- Top Bar -->
+    <div class="top-bar py-2 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> New York</span>
+                        <span><i class="far fa-clock me-1"></i> <span id="current-date">Mon, March 1, 2024</span></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons d-flex justify-content-end">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text">News Magazine</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Politics</a></li>
-                <li><a href="#">Tech</a></li>
-                <li><a href="#">Science</a></li>
-            </ul>
+    <!-- Header -->
+    <header class="header py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <h1 class="m-0">NewsPress</h1>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="header-ad">
+                        <img src="https://via.placeholder.com/728x90" alt="Advertisement" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="top-bar-right">
-            <ul class="menu">
-                <li><button type="button" class="button">Subscribe</button></li>
-            </ul>
-        </div>
-    </div>
+    </header>
 
-    <!-- Breaking News Banner -->
-    <div class="breaking-news-banner">
-        <div class="grid-container">
-            <div class="grid-x grid-padding-x align-middle">
-                <div class="cell">
-                    <span class="label alert">Breaking</span>
-                    <span class="breaking-news-text">Latest Updates: Major technology breakthrough announced...</span>
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">World</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Politics</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item" href="#">Tech</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Travel</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breaking News -->
+    <div class="breaking-news py-2 bg-light border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center">
+                        <span class="breaking-news-label bg-danger text-white px-3 py-1 me-3">Breaking News</span>
+                        <marquee class="breaking-news-content">
+                            Latest: Ukraine-Russia peace talks continue | SpaceX launches new satellite | Global climate summit announced
+                        </marquee>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="grid-container main-content">
-        <!-- Featured Story -->
-        <div class="grid-x grid-padding-x">
-            <div class="cell large-8">
-                <div class="featured-story">
-                    <div class="featured-image">
-                        <img src="https://placehold.co/800x400" alt="Featured Story">
-                    </div>
-                    <h1>Featured Story Headline</h1>
-                    <p class="lead">A compelling introduction to the main story of the day, featuring important developments and key insights.</p>
-                    <p class="byline">By John Doe • <span class="date">October 1, 2023</span></p>
-                </div>
-            </div>
-            
-            <!-- Side Stories -->
-            <div class="cell large-4">
-                <div class="side-stories">
-                    <h4>Trending</h4>
-                    <div class="story-card">
-                        <img src="https://placehold.co/300x200" alt="Story 1">
-                        <h5>Technology Impact</h5>
-                        <p>How new innovations are changing our daily lives.</p>
-                    </div>
-                    <div class="story-card">
-                        <img src="https://placehold.co/300x200" alt="Story 2">
-                        <h5>Science Discovery</h5>
-                        <p>Latest breakthrough in quantum computing.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- News Categories -->
-        <div class="grid-x grid-padding-x news-categories">
-            <!-- Technology News -->
-            <div class="cell medium-4">
-                <div class="category-section">
-                    <h4>Technology</h4>
-                    <div class="news-card">
-                        <img src="https://placehold.co/400x300" alt="Tech News">
-                        <div class="news-card-content">
-                            <h5>AI Developments</h5>
-                            <p>Latest developments in artificial intelligence and machine learning.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Science News -->
-            <div class="cell medium-4">
-                <div class="category-section">
-                    <h4>Science</h4>
-                    <div class="news-card">
-                        <img src="https://placehold.co/400x300" alt="Science News">
-                        <div class="news-card-content">
-                            <h5>Space Exploration</h5>
-                            <p>New discoveries from the latest space missions.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Politics News -->
-            <div class="cell medium-4">
-                <div class="category-section">
-                    <h4>Politics</h4>
-                    <div class="news-card">
-                        <img src="https://placehold.co/400x300" alt="Politics News">
-                        <div class="news-card-content">
-                            <h5>Global Summit</h5>
-                            <p>World leaders gather to discuss climate change.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Newsletter Signup -->
-        <div class="grid-x grid-padding-x newsletter-section">
-            <div class="cell">
-                <div class="newsletter-container">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for daily updates</p>
-                    <form>
-                        <div class="input-group">
-                            <input class="input-group-field" type="email" placeholder="Your email address">
-                            <div class="input-group-button">
-                                <input type="submit" class="button" value="Subscribe">
+    <main class="py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content Area -->
+                <div class="col-lg-8">
+                    <!-- Featured Story -->
+                    <div class="featured-story mb-4">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/800x500" alt="Featured Story" class="img-fluid">
+                            <div class="featured-story-content position-absolute bottom-0 start-0 p-4 text-white">
+                                <span class="category bg-primary px-2 py-1">World</span>
+                                <h2 class="mt-2">Global Leaders Meet to Address Climate Change Crisis</h2>
+                                <div class="meta">
+                                    <span><i class="far fa-clock"></i> 2 hours ago</span>
+                                    <span class="ms-3"><i class="far fa-comment"></i> 23</span>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="grid-container">
-            <div class="grid-x grid-padding-x">
-                <div class="cell medium-4">
-                    <h5>About Us</h5>
-                    <p>Your trusted source for the latest news and in-depth reporting.</p>
+                    <!-- News Grid -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="https://via.placeholder.com/400x300" alt="News" class="img-fluid">
+                                <div class="news-card-content p-3">
+                                    <span class="category text-primary">Technology</span>
+                                    <h3 class="h5 mt-2">New AI Breakthrough in Medical Research</h3>
+                                    <p class="text-muted">Scientists develop AI system capable of predicting disease patterns...</p>
+                                    <div class="meta text-muted">
+                                        <small><i class="far fa-clock"></i> 4 hours ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="news-card">
+                                <img src="https://via.placeholder.com/400x300" alt="News" class="img-fluid">
+                                <div class="news-card-content p-3">
+                                    <span class="category text-primary">Sports</span>
+                                    <h3 class="h5 mt-2">Championship Finals Set for Weekend Showdown</h3>
+                                    <p class="text-muted">Top teams prepare for the ultimate battle in season finale...</p>
+                                    <div class="meta text-muted">
+                                        <small><i class="far fa-clock"></i> 6 hours ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cell medium-4">
-                    <h5>Quick Links</h5>
-                    <ul class="no-bullet">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Politics</a></li>
-                        <li><a href="#">Tech</a></li>
-                        <li><a href="#">Science</a></li>
-                    </ul>
-                </div>
-                <div class="cell medium-4">
-                    <h5>Follow Us</h5>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Popular News -->
+                    <div class="sidebar-widget mb-4">
+                        <h4 class="widget-title">Popular News</h4>
+                        <div class="popular-news">
+                            <div class="news-item d-flex mb-3">
+                                <img src="https://via.placeholder.com/100x100" alt="News" class="flex-shrink-0 me-3">
+                                <div class="news-content">
+                                    <h5 class="mb-1">Stock Markets Hit New Record High</h5>
+                                    <small class="text-muted"><i class="far fa-clock"></i> 8 hours ago</small>
+                                </div>
+                            </div>
+                            <div class="news-item d-flex mb-3">
+                                <img src="https://via.placeholder.com/100x100" alt="News" class="flex-shrink-0 me-3">
+                                <div class="news-content">
+                                    <h5 class="mb-1">New Space Discovery Amazes Scientists</h5>
+                                    <small class="text-muted"><i class="far fa-clock"></i> 12 hours ago</small>
+                                </div>
+                            </div>
+                            <div class="news-item d-flex mb-3">
+                                <img src="https://via.placeholder.com/100x100" alt="News" class="flex-shrink-0 me-3">
+                                <div class="news-content">
+                                    <h5 class="mb-1">Major Sports Trade Shakes Up League</h5>
+                                    <small class="text-muted"><i class="far fa-clock"></i> 1 day ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget mb-4">
+                        <h4 class="widget-title">Newsletter</h4>
+                        <div class="newsletter-box p-4 bg-light">
+                            <p>Subscribe to our newsletter for daily news updates</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Categories</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                World
+                                <span class="badge bg-primary rounded-pill">42</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Technology
+                                <span class="badge bg-primary rounded-pill">28</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Sports
+                                <span class="badge bg-primary rounded-pill">35</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Entertainment
+                                <span class="badge bg-primary rounded-pill">24</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="grid-x">
-                <div class="cell">
-                    <p class="copyright">&copy; 2023 News Magazine. All rights reserved.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>About NewsPress</h5>
+                    <p>NewsPress is your trusted source for the latest news and updates from around the world. We deliver accurate, timely, and comprehensive news coverage.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">About Us</a></li>
+                        <li><a href="#" class="text-white-50">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white-50">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white-50 me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 NewsPress. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Foundation JavaScript Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(document).foundation();
-        });
-    </script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
